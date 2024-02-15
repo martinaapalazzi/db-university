@@ -162,14 +162,14 @@
             nome:
         </div>
         <div>
-            RISPOSTA
+            SELECT students.name, students.surname, degrees.name, departments.name FROM `students` JOIN `degrees` ON degrees.id = students.degree_id JOIN `departments` ON departments.id = degrees.department_id;
         </div>
         <br>
         <div>
             5- Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti:
         </div>
         <div>
-            RISPOSTA
+            SELECT degrees.name, courses.name, teachers.name FROM `degrees` INNER JOIN `courses` ON courses.degree_id = degrees.id INNER JOIN `course_teacher` ON course_teacher.course_id = courses.id INNER JOIN `teachers` ON course_teacher.teacher_id = teachers.id;
         </div>
         <br>
         <div>
@@ -177,7 +177,7 @@
             Matematica (54):
         </div>
         <div>
-            RISPOSTA
+            SELECT * FROM `teachers` INNER JOIN `departments` ON departments.name = 'Dipartimento di Matematica';
         </div>
         <br>
         <div>

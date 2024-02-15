@@ -1,6 +1,9 @@
-div {
+.table-database {
     width: 1200px;
 }
 img {
     width: 100%;
+}
+.title {
+    color: red;
 }

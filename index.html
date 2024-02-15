@@ -10,6 +10,10 @@
     <div class="table-database">
         <img src="table/img-table-uni.png" alt="" srcset="">
     </div>
+    
+    <div class="trial">
+        hello
+    </div>
 
     <div>
         <div class="title">
@@ -94,13 +98,13 @@
     <br>
     <div>
         <div class="title">
-            QUERY CON SELECT:
+            QUERY CON GROUP BY:
         </div>
         <div>
             1- Contare quanti iscritti ci sono stati ogni anno:
         </div>
         <div>
-            RISPOSTA
+            SELECT `enrolment_date` FROM `students` GROUP BY `enrolment_date`;
         </div>
         <br>
         <div>
@@ -114,7 +118,7 @@
             3- Calcolare la media dei voti di ogni appello d'esame:
         </div>
         <div>
-            RISPOSTA
+            SELECT AVG(vote) FROM `exam_student` GROUP BY `exam_id`;
         </div>
         <br>
         <div>
@@ -128,7 +132,7 @@
     <br>
     <div>
         <div class="title">
-            QUERY CON SELECT:
+            QUERY CON JOIN:
         </div>
         <div>
             1- Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia:

@@ -1,14 +1,11 @@
 .table-database {
     width: 1200px;
 }
+
 img {
     width: 100%;
 }
-.trial {
-    width: 100px;
-    height: 300px;
-    background-color: blue;
-}
+
 .title {
     color: red;
 }

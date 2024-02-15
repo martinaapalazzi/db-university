@@ -138,7 +138,7 @@
             1- Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia:
         </div>
         <div>
-            SELECT * FROM `students` INNER JOIN `degrees` ON degrees.name = 'Corso di Laurea di Economia'; // SELECT * FROM `students` WHERE `degree_id`= '53';
+            SELECT students.*, degrees.name AS corso_di_laurea FROM `students` INNER JOIN degrees ON students.degree_id = degrees.id WHERE degrees.name = "Corso di Laurea In Economia"; // SELECT * FROM `students` WHERE `degree_id`= '53';
         </div>
         <br>
         <div>
@@ -146,14 +146,14 @@
             Neuroscienze:
         </div>
         <div>
-            SELECT * FROM `degrees` WHERE `level` = 'magistrale';
+            SELECT * FROM `degrees` INNER JOIN `departments` ON degrees.department_id = departments.id WHERE departments.id = 7 AND degrees.level = 'magistrale';
         </div>
         <br>
         <div>
             3- Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44):
         </div>
         <div>
-            SELECT * FROM `courses` INNER JOIN `teachers` ON 
+            SELECT * FROM `courses` INNER JOIN `course_teacher` ON courses.id = course_teacher.course_id WHERE course_teacher.teacher_id = 44;
         </div>
         <br>
         <div>

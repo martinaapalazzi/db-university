@@ -146,14 +146,14 @@
             Neuroscienze:
         </div>
         <div>
-            SELECT * FROM `degrees` INNER JOIN `departments` ON degrees.department_id = departments.id WHERE departments.id = 7 AND degrees.level = 'magistrale';
+            SELECT degrees.name FROM `degrees` INNER JOIN `departments` ON degrees.department_id = departments.id WHERE departments.id = 7 AND degrees.level = 'magistrale';
         </div>
         <br>
         <div>
             3- Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44):
         </div>
         <div>
-            SELECT * FROM `courses` INNER JOIN `course_teacher` ON courses.id = course_teacher.course_id WHERE course_teacher.teacher_id = 44;
+            SELECT courses.name FROM `courses` INNER JOIN `course_teacher` ON courses.id = course_teacher.course_id WHERE course_teacher.teacher_id = 44;
         </div>
         <br>
         <div>

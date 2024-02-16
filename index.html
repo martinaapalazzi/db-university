@@ -10,10 +10,6 @@
     <div class="table-database">
         <img src="table/img-table-uni.png" alt="" srcset="">
     </div>
-    
-    <div class="trial">
-        hello
-    </div>
 
     <div>
         <div class="title">
@@ -104,7 +100,7 @@
             1- Contare quanti iscritti ci sono stati ogni anno:
         </div>
         <div>
-            SELECT `enrolment_date` FROM `students` GROUP BY `enrolment_date`;
+            SELECT `enrolment_date`, COUNT (id) FROM `students` GROUP BY `enrolment_date`;
         </div>
         <br>
         <div>
@@ -118,14 +114,14 @@
             3- Calcolare la media dei voti di ogni appello d'esame:
         </div>
         <div>
-            SELECT AVG(vote) FROM `exam_student` GROUP BY `exam_id`;
+            SELECT exam_id, ROUND(AVG(vote)2) FROM `exam_student` GROUP BY `exam_id`;
         </div>
         <br>
         <div>
             4- Contare quanti corsi di laurea ci sono per ogni dipartimento:
         </div>
         <div>
-            SELECT COUNT(id) FROM `degrees` GROUP BY department_id;
+            SELECT department_id, COUNT(id) FROM `degrees` GROUP BY department_id;
         </div>
     </div>
     <br>
@@ -138,7 +134,7 @@
             1- Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia:
         </div>
         <div>
-            SELECT students.*, degrees.name AS corso_di_laurea FROM `students` INNER JOIN degrees ON students.degree_id = degrees.id WHERE degrees.name = "Corso di Laurea In Economia"; // SELECT * FROM `students` WHERE `degree_id`= '53';
+            SELECT students.*, degrees.name AS corso_di_laurea FROM `students` INNER JOIN degrees ON students.degree_id = degrees.id WHERE degrees.name = "Corso di Laurea In Economia";
         </div>
         <br>
         <div>
